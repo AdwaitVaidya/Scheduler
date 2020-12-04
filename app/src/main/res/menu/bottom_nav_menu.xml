@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_today"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:iconTint="@color/main_bottom_navigation_item_icon"
+        android:title="@string/bottom_navigation_today" />
+
+    <item
+        android:id="@+id/navigation_week"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:iconTint="@color/main_bottom_navigation_item_icon"
+        android:title="@string/bottom_navigation_week" />
+
+    <item
+        android:id="@+id/navigation_month"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:iconTint="@color/main_bottom_navigation_item_icon"
+        android:title="@string/bottom_navigation_year" />
+
+</menu>
