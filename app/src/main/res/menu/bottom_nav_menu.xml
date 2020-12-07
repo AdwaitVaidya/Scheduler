@@ -4,11 +4,14 @@
     <item
         android:id="@+id/navigation_today"
         android:icon="@drawable/ic_home_black_24dp"
+        android:enabled="true"
         android:iconTint="@color/main_bottom_navigation_item_icon"
-        android:title="@string/bottom_navigation_today" />
+        android:title="@string/bottom_navigation_today"
+        android:onClick="ifWell"/>
 
     <item
         android:id="@+id/navigation_week"
+        android:enabled="true"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:iconTint="@color/main_bottom_navigation_item_icon"
         android:title="@string/bottom_navigation_week" />
@@ -16,6 +19,7 @@
     <item
         android:id="@+id/navigation_month"
         android:icon="@drawable/ic_notifications_black_24dp"
+        android:enabled="true"
         android:iconTint="@color/main_bottom_navigation_item_icon"
         android:title="@string/bottom_navigation_year" />
 
