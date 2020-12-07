@@ -1,5 +1,6 @@
 package com.example.scheduler.ui.dayFragment;
 
+import androidx.fragment.app.FragmentContainer;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -28,8 +29,19 @@ public class DayFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(DayViewModel.class);
+        FragmentContainer fragmentContainer = new FragmentContainer() {
+            @Nullable
+            @Override
+            public View onFindViewById(int id) {
+                return onFindViewById(R.id.fragment_container_view_tag);
+            }
+
+            @Override
+            public boolean onHasView() {
+                return false;
+            }
+        };
+        homeViewModel = new ViewModelProvider(this).get(DayViewModel.class);
         View root = inflater.inflate(R.layout.day_fragment, container, false);
       /*  final TextView textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
